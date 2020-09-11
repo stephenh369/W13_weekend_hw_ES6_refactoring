@@ -13,7 +13,8 @@ class Library {
   }
   printInventory() {
     this.books.forEach((book) => {
-      console.log(`${book.title} by ${book.author}`);
+      ({title, author} = {title: book.title, author: book.author})
+      console.log(`${title} by ${author}`);
     });
   }
 }
